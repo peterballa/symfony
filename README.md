@@ -6,7 +6,7 @@
 - MySQL + Heidi SQL (with user root user+password)
   
       ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Marso_901';
-- PHP 8.0
+- PHP >=8.0
 - Composer
 - Symfony binary (optional)
 
