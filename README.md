@@ -1,4 +1,4 @@
-# Symfony API platform
+# Symfony API platform for Beginners
 
 ## Setup
 
@@ -65,3 +65,10 @@ Use the given token to call api requests with Authorization header Bearer: ${tok
 With refresh token you can generate new JWT token without adding credential
 
 ![postman_refresh](.docs/postman_refresh.png)
+
+## Sources
+
+- https://www.youtube.com/watch?v=mqOMeVwWqwk&ab_channel=GaryClarke
+- https://api-platform.com/docs/distribution/
+- https://www.youtube.com/watch?v=XT4oy1d1j-g&ab_channel=OverSeasMedia
+- https://packagist.org/packages/gesdinet/jwt-refresh-token-bundle
