@@ -2,6 +2,17 @@
 
 ## Setup
 
+0. Requirements (No Docker)
+- MySQL + Heidi SQL (with user root user+password)
+  
+      ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Marso_901';
+- PHP 8.0
+- Composer
+- Symfony binary (optional)
+
+      > sudo apt update
+      > sudo apt install symfony-cli
+
 1. Generate JWT keys
 
        > bin/console lexik:jwt:generate-keypair
@@ -50,3 +61,7 @@ Response:
 Use the given token to call api requests with Authorization header Bearer: ${token} e.g.:
 
 ![postman_request](.docs/postman_request.png)
+
+With refresh token you can generate new JWT token without adding credential
+
+![postman_refresh](.docs/postman_refresh.png)
