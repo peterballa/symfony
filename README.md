@@ -4,13 +4,11 @@
 
 1. Generate JWT keys
 
-
-      > bin/console lexik:jwt:generate-keypair
+       > bin/console lexik:jwt:generate-keypair
 
 2. Migrate database
-   
 
-      > bin/console doctrine:migrations:migrate
+       > bin/console doctrine:migrations:migrate
    
 3. Create User in the user table
 
@@ -20,6 +18,6 @@
 
 The password is a hash value from 'admin' word. You can generate with
 
-      > bin/console security:hash-password
+    > bin/console security:hash-password
 
 Here choose actually any e.g.: [0] App\Entity\User, then add a password. Copy it into user table.
