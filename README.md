@@ -4,9 +4,15 @@
 
 1. Generate JWT keys
 
-        > bin/console lexik:jwt:generate-keypair
 
-2. Create User in the user table
+      > bin/console lexik:jwt:generate-keypair
+
+2. Migrate database
+   
+
+      > bin/console doctrine:migrations:migrate
+   
+3. Create User in the user table
 
 - email: admin@gmail.com
 - roles: ["ROLE_USER"]
