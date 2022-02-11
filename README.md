@@ -72,3 +72,4 @@ With refresh token you can generate new JWT token without adding credential
 - https://api-platform.com/docs/distribution/
 - https://www.youtube.com/watch?v=XT4oy1d1j-g&ab_channel=OverSeasMedia
 - https://packagist.org/packages/gesdinet/jwt-refresh-token-bundle
+- https://jwt.io/
