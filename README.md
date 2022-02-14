@@ -33,7 +33,12 @@ The password is a hash value from 'admin' word. You can generate with
 
 Here choose actually any e.g.: [0] App\Entity\User, then add a password. Copy it into user table.
 
-4. Run local server
+4. Install node packages
+
+
+    > npm run install
+
+5. Run local server
 
        > symfony server:start
 
