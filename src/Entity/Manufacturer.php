@@ -17,7 +17,7 @@ use Symfony\Component\Validator\Constraints as Assert;
         collectionOperations: ['get', 'post'],
         itemOperations: ['get', 'put'],
         denormalizationContext: ['groups' => ['write']],
-        normalizationContext: ['groups' => ['manufacturer', 'read']],
+        normalizationContext: ['groups' => ['read']],
     ),
     ApiFilter(ApiFilters\SearchFilter::class, properties: ['id' => 'exact', 'description' => 'partial']),
     ApiFilter(ApiFilters\DateFilter::class, properties: ['listedDate']),

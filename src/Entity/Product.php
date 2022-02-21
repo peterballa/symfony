@@ -10,7 +10,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 #[
     ORM\Entity,
     ApiResource(
-        normalizationContext: ['groups' => ['manufacturer', 'read']],
+        normalizationContext: ['groups' => ['read']],
     )
 ]
 class Product
@@ -22,7 +22,7 @@ class Product
         ORM\Id,
         ORM\GeneratedValue,
         ORM\Column(type: 'integer'),
-        Groups(["manufacturer", "read"])
+        Groups(["read"])
     ]
     private ?int $id = null;
 
@@ -32,7 +32,7 @@ class Product
     #[
         Assert\NotNull,
         ORM\Column(type: 'string'),
-        Groups(["manufacturer", "read"])
+        Groups(["read"])
     ]
     private ?string $mpn = null;
 
@@ -42,7 +42,7 @@ class Product
     #[
         Assert\NotBlank,
         ORM\Column(type: 'string'),
-        Groups(["manufacturer", "read"])
+        Groups(["read"])
     ]
     private string $name = '';
 
@@ -52,7 +52,7 @@ class Product
     #[
         Assert\NotBlank,
         ORM\Column(type: 'text'),
-        Groups(["manufacturer", "read"])
+        Groups(["read"])
     ]
     private string $description = '';
 
@@ -62,7 +62,7 @@ class Product
     #[
         Assert\NotNull,
         ORM\Column(type: 'datetime'),
-        Groups(["manufacturer", "read"])
+        Groups(["read"])
     ]
     private ?\DateTimeInterface $issueDate = null;
 
@@ -70,7 +70,8 @@ class Product
      * The manufacturer of the product.
      */
     #[
-        ORM\ManyToOne(targetEntity: 'Manufacturer', inversedBy: 'products')
+        ORM\ManyToOne(targetEntity: 'Manufacturer', inversedBy: 'products'),
+        Groups(["read"])
     ]
     private ?Manufacturer $manufacturer = null;
 
